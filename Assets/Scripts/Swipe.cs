@@ -25,12 +25,12 @@ public class Swipe : MonoBehaviour {
     {
         if (left)
         {
-            destination = Vector2.left * 4.5f;
+            destination = Vector2.left * 3.75f;
             destination.y = 0.55f;
         }
         else
         {
-            destination = Vector2.right * 4.5f;
+            destination = Vector2.right * 3.75f;
             destination.y = 0.55f;
         }
     }

@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
             obs[i].GetComponent<CardApplier>().bio.text = cards[counter].bio;
             obs[i].GetComponent<CardApplier>().stat = cards[counter].stat;
             obs[i].transform.SetParent(GameObject.FindGameObjectWithTag("GameController").transform);
-            obs[i].GetComponent<SortingGroup>().sortingOrder = i;
+            obs[i].GetComponent<SortingGroup>().sortingOrder = i+1;
             activeCard = obs[i];
             counter++;
         }
