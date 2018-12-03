@@ -4,13 +4,13 @@
 [System.Serializable]
 public class Card: ScriptableObject {
 
-    public string name, bio;
+    public string cardName, bio;
     public Sprite sprite;
     public int stat;
 
     public ScriptableObject Init(string n, string b, Sprite s, int st)
     {
-        name = n;
+        cardName = n;
         bio = b;
         sprite = s;
         stat = st;

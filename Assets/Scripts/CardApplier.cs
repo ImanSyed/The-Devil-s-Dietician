@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardApplier : MonoBehaviour {
 
     public SpriteRenderer spriteRenderer;
-    public TextMesh name, bio;
+    public TextMesh cardName, bio;
     public int stat;
 
 }

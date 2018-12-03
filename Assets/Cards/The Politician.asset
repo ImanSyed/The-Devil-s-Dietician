@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31502dec07c7c514b94adb958d77ead9, type: 3}
-  m_Name: Weeb
+  m_Name: The Politician
   m_EditorClassIdentifier: 
-  cardName: Weeb
+  cardName: The Politician
   bio: ' '
-  sprite: {fileID: 21300000, guid: eb631b225b602304784b360a86f02d97, type: 3}
+  sprite: {fileID: 21300000, guid: f47d215f017df3142b7158bff55a28b7, type: 3}
   stat: 0

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using System.Collections;
 using EZCameraShake;
 
 public class GameManager : MonoBehaviour {
 
-    [SerializeField] Card[] cards;
+    public Card[] cards;
     [SerializeField] Vector2 pos;
     [SerializeField] GameObject template;
     [SerializeField] Animator anim;
@@ -22,10 +23,11 @@ public class GameManager : MonoBehaviour {
         {
             obs[i] = Instantiate(template, pos, Quaternion.identity);
             obs[i].GetComponent<CardApplier>().spriteRenderer.sprite = cards[counter].sprite;
-            obs[i].GetComponent<CardApplier>().name.text = cards[counter].name;
+            obs[i].GetComponent<CardApplier>().cardName.text = cards[counter].cardName;
             obs[i].GetComponent<CardApplier>().bio.text = cards[counter].bio;
             obs[i].GetComponent<CardApplier>().stat = cards[counter].stat;
             obs[i].transform.SetParent(GameObject.FindGameObjectWithTag("GameController").transform);
+            obs[i].GetComponent<SortingGroup>().sortingOrder = i;
             activeCard = obs[i];
             counter++;
         }
