@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31502dec07c7c514b94adb958d77ead9, type: 3}
-  m_Name: Car Dealer
+  m_Name: Phone
   m_EditorClassIdentifier: 
-  name: Car Dealer
-  bio: aaaaaa
-  sprite: {fileID: 21300000, guid: fd171a5975dbf3f4dae70219e1c71e2c, type: 3}
-  stat: 2
+  name: Phone
+  bio: ' '
+  sprite: {fileID: 21300000, guid: 6db12a4adb21bde4db7771f77aa7adc5, type: 3}
+  stat: 0

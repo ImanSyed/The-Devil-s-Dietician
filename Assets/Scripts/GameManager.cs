@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
             if (!dir)
             {
                 slider.value += activeCard.GetComponent<CardApplier>().stat;
-                Camera.main.GetComponent<CameraShaker>().ShakeOnce(5, 5, 0, 4.5f);
+                Camera.main.GetComponent<CameraShaker>().ShakeOnce(2, 2, 0, 1.75f);
             }
             activeCard.GetComponent<Swipe>().S(dir);
             if (counter > 0)
