@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using EZCameraShake;
 
 public class GameManager : MonoBehaviour {
 
@@ -7,6 +9,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] Vector2 pos;
     [SerializeField] GameObject template;
     [SerializeField] Animator anim;
+    [SerializeField] Slider slider;
     GameObject[] obs; 
 
     int counter;
@@ -48,6 +51,11 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(0.2f);
         if (activeCard)
         {
+            if (!dir)
+            {
+                slider.value += activeCard.GetComponent<CardApplier>().stat;
+                Camera.main.GetComponent<CameraShaker>().ShakeOnce(5, 5, 0, 4.5f);
+            }
             activeCard.GetComponent<Swipe>().S(dir);
             if (counter > 0)
             {
