@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour {
 
     GameObject activeCard;
 
-	void Start () {
+    void Start() {
         obs = new GameObject[cards.Length];
-        for(int i = 0; i < obs.Length; i++)
+        for (int i = 0; i < obs.Length; i++)
         {
             obs[i] = Instantiate(template, pos, Quaternion.identity);
             obs[i].GetComponent<CardApplier>().spriteRenderer.sprite = cards[counter].sprite;
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
             obs[i].GetComponent<CardApplier>().bio.text = cards[counter].bio;
             obs[i].GetComponent<CardApplier>().stat = cards[counter].stat;
             obs[i].transform.SetParent(GameObject.FindGameObjectWithTag("GameController").transform);
-            obs[i].GetComponent<SortingGroup>().sortingOrder = i+1;
+            obs[i].GetComponent<SortingGroup>().sortingOrder = i + 1;
             activeCard = obs[i];
             counter++;
         }
@@ -53,10 +53,10 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(0.2f);
         if (activeCard)
         {
+            Camera.main.GetComponent<CameraShaker>().ShakeOnce(2, 2, 0, 1.75f);
             if (!dir)
             {
                 slider.value += activeCard.GetComponent<CardApplier>().stat;
-                Camera.main.GetComponent<CameraShaker>().ShakeOnce(2, 2, 0, 1.75f);
             }
             activeCard.GetComponent<Swipe>().S(dir);
             if (counter > 0)
